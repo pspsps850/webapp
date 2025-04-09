@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Node.js Calculator</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="calculator">
+    <h2>Simple Calculator</h2>
+    <form action="/calculate" method="POST">
+      <input type="number" name="num1" required placeholder="Enter first number" />
+      <select name="operation">
+        <option value="add">+</option>
+        <option value="subtract">−</option>
+        <option value="multiply">×</option>
+        <option value="divide">÷</option>
+      </select>
+      <input type="number" name="num2" required placeholder="Enter second number" />
+      <button type="submit">Calculate</button>
+    </form>
+
+    <% if (result !== null && result !== undefined) { %>
+      <div class="result">Result: <%= result %></div>
+    <% } %>
+    
+    
+  </div>
+</body>
+</html>
